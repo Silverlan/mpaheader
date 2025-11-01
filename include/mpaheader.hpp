@@ -12,7 +12,7 @@ public:
 	CMPAHeader(CMPAStream *pStream, std::uint32_t &dwOffset, bool bExactOffset, bool bReverse, CMPAHeader *pCompareHeader);
 	~CMPAHeader();
 
-	bool operator==(CMPAHeader &DestHeader) const;
+	bool operator==(const CMPAHeader &DestHeader) const;
 
 	std::uint32_t CalcFrameSize() const { return int(((m_dwCoefficients[m_bLSF][m_Layer] * m_dwBitrate / m_dwSamplesPerSec) + m_dwPaddingSize)) * m_dwSlotSizes[m_Layer]; };
 

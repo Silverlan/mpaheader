@@ -424,7 +424,7 @@ CMPAHeader::~CMPAHeader()
 // return true if identical or related
 // return false if no similarities
 
-bool CMPAHeader::operator==(CMPAHeader &DestHeader) const
+bool CMPAHeader::operator==(const CMPAHeader &DestHeader) const
 {
 	// version change never possible
 	if (DestHeader.m_Version != m_Version)

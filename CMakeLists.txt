@@ -56,3 +56,7 @@ add_library(mpaheader SHARED ${SOURCES} ${INCLUDES})
 target_compile_definitions(mpaheader PRIVATE MPAH_DLL)
 target_include_directories(mpaheader PUBLIC "include")
 target_precompile_headers(mpaheader PRIVATE "src/pch.hpp")
+
+if(MSVC)
+    target_compile_options(mpaheader PRIVATE /Zc:strictStrings-)
+endif()
