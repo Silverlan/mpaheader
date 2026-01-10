@@ -1,5 +1,6 @@
 #include "helper.hpp"
 #include <cstring>
+#include <cstdlib>
 
 char *MPAHelper::cloneCString(const char *origStr)
 {
